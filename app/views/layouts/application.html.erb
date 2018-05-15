@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyBlog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+    <style type="text/css" href="./style.css"></style>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1 class=main_site_form><%= link_to"myBlog", "/" %></h1>
+    <% if user_signed_in? %>
+      <ul class="right hide-on-med-and-down">
+        <h3 class=account_name><%= current_user.name %>のアカウント</h3>
+        <li class="btn waves-effect"><%= link_to "投稿" ,"/blogs/new", method: :get, id:"a"%></li>
+        <li class="btn"><%= link_to"ログアウト", "/users/sign_out", method: :delete,id:"a"%></li>
+      </ul>
+    <% else %>
+      <ul class="right hide-on-med-and-down">
+        <li class="btn"><%= link_to"ログイン", "/users/sign_in", method: :get,id:"a" %></li>
+        <li class="btn"><%= link_to"新規登録", "/users/sign_up", method: :get,id:"a" %></li>
+      </ul>
+    <% end %>
+  </header>
+
+  <div class=index>
+
+    <%= yield %>
+
+  </div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+.clearfix{
+  content:"";
+  clear: both;
+  display: block;
+}
+
+header{
+  height:120px;
+  background-color:#90ee90;
+  color:white;
+}
+
+index{
+}
+
+.main_site_form a{
+  float:left;
+  margin-left:30px;
+  text-decoration:none;
+  font-family:cursive;
+  color:white;
+
+}
+
+.account_name{
+  float:left;
+  margin-top:50px;
+  margin-left:10px;
+}
+
+.blog_control{
+
+}
+
+.blog_view {
+  width: 80%;
+  height: 200px;
+  background-color:#FFFFCC;
+  margin-top: 20px;
+  margin-bottom:20px;
+  margin-right:100px;
+  margin-left: 100px;
+  border:solid 2px;
+  text-decoration:none;
+}
+
+.blog_title{
+  text-align:center;
+}
+
+.blog_text{
+ /* white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 30px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+.blog_show{
+  width: 80%;
+  background-color:#FFFFCC;
+  margin-top: 50px;
+  margin-bottom:20px;
+  margin-right:100px;
+  margin-left: 100px;
+  border:solid 2px;
+  text-decoration:none;
+}
+
+.alert_msg{
+  font:#FF0033;
+}
+
+.right hide-on-med-and-down {
+  color:white;
+}
+

@@ -1,0 +1,15 @@
+<% @blogs.each do |blog| %>
+  <div class="blog_view clearfix">
+    <h4 class=blog_title>~<%= blog.title %>~</h4><br>
+      <div class="blog_text">
+        <%= blog.text %>
+      </div>
+      <ul class="right hide-on-med-and-down" >
+        <% if user_signed_in? && current_user.id == blog.user_id %>
+          <li class="btn"><%= link_to"編集", "/blogs/#{blog.id}/edit", method: :get, id:"a" %></li>
+          <li class="btn"><%= link_to"削除", "/blogs/#{blog.id}", method: :delete, id:"a"%></li>
+        <% end %>
+        <li class="btn"><%=link_to"詳細", "/blogs/#{blog.id}", method: :get, id:"a"%></li>
+      </ul>
+  </div>
+<% end %>

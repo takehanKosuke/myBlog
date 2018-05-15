@@ -1,0 +1,23 @@
+<% if flash[:alert] %>
+  <h5 class="alert_msg clearfix"><%= flash[:alert] %></h5>
+<% end %>
+
+<div class="row ">
+  <%= form_tag("/blogs", method: :post,class:"col s12 input-field1") do %>
+    <div class="row ">
+      <div class="input-field col s8 offset-s2">
+        <input id="title" type="text" class="validate" name="title">
+        <label for="title">タイトル</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s8 offset-s2">
+        <textarea id="textarea1" class="materialize-textarea" name="text" ></textarea>
+        <label for="textarea1">内容</label>
+      </div>
+    </div>
+      <button class="btn waves-effect waves-light col s1 offset-s9" type="submit" name="action">
+        <i class="material-icons right">投稿</i>
+      </button>
+  <% end %>
+</div>
